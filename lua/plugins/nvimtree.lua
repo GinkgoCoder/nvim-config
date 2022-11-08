@@ -13,7 +13,7 @@ local function init(nvimtree)
 		},
 		filters = {
 			dotfiles = false,
-			custom = { "node_modules" },
+			custom = { "node_modules", ".git" },
 		},
 		view = {
 			width = 35,
@@ -37,6 +37,15 @@ local function init(nvimtree)
 		-- https://github.com/4U6U57/wsl-open/
 		system_open = {
 			cmd = "wsl-open",
+		},
+		diagnostics = {
+			enable = true,
+			icons = {
+				hint = "",
+				info = "",
+				warning = "",
+				error = "",
+			},
 		},
 	})
 end

@@ -16,7 +16,7 @@ local init = function(bufferline)
 				},
 			},
 			-- LSP config
-			diagnostics = "nvim_lsp",
+			diagnostics = "coc",
 			---@diagnostic disable-next-line: unused-local
 
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)

@@ -30,4 +30,5 @@ require("plugins.lsp.config.rust")
 
 require("plugins.lsp.null_ls")
 require("plugins.lsp.ui")
-require("plugins.lsp.cmp")
+--require("plugins.lsp.cmp")
+
