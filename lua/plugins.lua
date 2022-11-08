@@ -14,20 +14,6 @@ packer.startup({
     use("glepnir/dashboard-nvim")
     use("ahmedkhalf/project.nvim")
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use({ "williamboman/mason.nvim" })
-    use({ "williamboman/mason-lspconfig.nvim" })
-    use("neovim/nvim-lspconfig")
-    -- auto complete
-    -- autocomplete engine
-    use("hrsh7th/nvim-cmp")
-    -- snippet engine
-    use("hrsh7th/vim-vsnip")
-    -- auto complete source
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    use("hrsh7th/cmp-path") -- { name = 'path' }
-    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     -- common snippet
     use("rafamadriz/friendly-snippets")
     use("lukas-reineke/indent-blankline.nvim")
