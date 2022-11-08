@@ -11,7 +11,6 @@ require("config_utils").init_plugin("lualine", function(lualine)
       lualine_c = {
         "filename",
         {
-          "lsp_progress",
           spinner_symbols = { " ", " ", " ", " ", " ", " " },
         },
       },

@@ -13,7 +13,7 @@ local function init(nvimtree)
     },
     filters = {
       dotfiles = false,
-      custom = { "node_modules", ".git" },
+      custom = { "node_modules", "\\.git" },
     },
     view = {
       width = 35,
