@@ -5,12 +5,14 @@
     "/usr/local/share/nvim/runtime/lua/vim": true,
     "/usr/local/share/nvim/runtime/lua/vim/lsp": true
   },
+  "python.formatting.autopep8Path": "~/.local/bin/autopep8",
   "Lua.diagnostics.globals": ["vim"],
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
     "json",
     "python",
-    "rust"
+    "rust",
+    "lua"
   ]
 }

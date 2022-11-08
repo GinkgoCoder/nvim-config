@@ -2,14 +2,23 @@
 
 This repository is used to setup a neo-vim for the development.
 
-## Installation
+## Prerequisites
 
-1. Install neo-vim
-2. Install Packer
-3. :PackerSync twice
-4. Install zip, and nodejs:
+| name   | version |
+| ------ | ------- |
+| neovim | >=9.0   |
+| Packer | latest  |
+| zip    | latest  |
+| nodejs | >=16.0  |
 
-| Column1 | Column2 | Column3 | Column4 | Column5 |
-| ------- | ------- | ------- | ------- | ------- |
-| Item1.1 | Item2.1 | Item3.1 | Item4.1 | Column1 |
-| Column1 | Column1 | Column1 | Column1 | Column1 |
+## Install
+
+1. Copy the whole folder into `~/.config/nvim`
+2. Open `nvim`, run `PackerSync` twice
+
+## Language Support
+
+- Python
+- Rust
+- Markdown
+- Lua
