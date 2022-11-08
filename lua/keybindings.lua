@@ -55,10 +55,10 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 -- coc
 map(
-	"i",
-	"<CR>",
-	[[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
-	{ noremap = true, silent = true, expr = true }
+  "i",
+  "<CR>",
+  [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
+  { noremap = true, silent = true, expr = true }
 )
 map("n", "<leader>rn", "<Plug>(coc-rename)", opt)
 map("n", "gi", "<Plug>(coc-implementation)", opt)
@@ -68,48 +68,50 @@ map("n", "gr", "<Plug>(coc-references)", opt)
 map("n", "[g", "<Plug>(coc-diagnostic-prev)", opt)
 map("n", "]g", "<Plug>(coc-diagnostic-next)", opt)
 
+-- Tagbar
+map("n", "<F10>", ":TagbarToggle<CR>", opt)
 -- LSP
 
 local pluginKeys = {}
 
 -- nvim-tree
 -- open nvim tree
-map("n", "<F10>", ":NvimTreeToggle<CR>", opt)
+map("n", "<F3>", ":NvimTreeToggle<CR>", opt)
 -- nvim tree shortcuts
 pluginKeys.nvimTreeList = {
-	-- open file
-	{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-	-- open file in a split
-	{ key = "v", action = "vsplit" },
-	{ key = "h", action = "split" },
-	-- hide and show file
-	{ key = "i", action = "toggle_custom" }, -- same custom (node_modules) in the filters
-	{ key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
-	-- file operations
-	{ key = "<F5>", action = "refresh" },
-	{ key = "a", action = "create" },
-	{ key = "d", action = "remove" },
-	{ key = "r", action = "rename" },
-	{ key = "x", action = "cut" },
-	{ key = "c", action = "copy" },
-	{ key = "p", action = "paste" },
-	{ key = "s", action = "system_open" },
+  -- open file
+  { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
+  -- open file in a split
+  { key = "v", action = "vsplit" },
+  { key = "h", action = "split" },
+  -- hide and show file
+  { key = "i", action = "toggle_custom" }, -- same custom (node_modules) in the filters
+  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
+  -- file operations
+  { key = "<F5>", action = "refresh" },
+  { key = "a", action = "create" },
+  { key = "d", action = "remove" },
+  { key = "r", action = "rename" },
+  { key = "x", action = "cut" },
+  { key = "c", action = "copy" },
+  { key = "p", action = "paste" },
+  { key = "s", action = "system_open" },
 }
 
 pluginKeys.mapVimspector = function()
-	-- 开始
-	map("n", "<leader>dd", ":call vimspector#Launch()<CR>", opt)
-	-- 结束
-	map("n", "<Leader>de", ":call vimspector#Reset()<CR>", opt)
-	-- 继续
-	map("n", "<Leader>dc", ":call vimspector#Continue()<CR>", opt)
-	-- 设置断点
-	map("n", "<Leader>dt", ":call vimspector#ToggleBreakpoint()<CR>", opt)
-	map("n", "<Leader>dT", ":call vimspector#ClearBreakpoints()<CR>", opt)
-	--  stepOver, stepOut, stepInto
-	map("n", "<leader>dj", "<Plug>VimspectorStepOver", opt)
-	map("n", "<leader>dk", "<Plug>VimspectorStepOut", opt)
-	map("n", "<leader>dl", "<Plug>VimspectorStepInto", opt)
+  -- 开始
+  map("n", "<leader>dd", ":call vimspector#Launch()<CR>", opt)
+  -- 结束
+  map("n", "<Leader>de", ":call vimspector#Reset()<CR>", opt)
+  -- 继续
+  map("n", "<Leader>dc", ":call vimspector#Continue()<CR>", opt)
+  -- 设置断点
+  map("n", "<Leader>dt", ":call vimspector#ToggleBreakpoint()<CR>", opt)
+  map("n", "<Leader>dT", ":call vimspector#ClearBreakpoints()<CR>", opt)
+  --  stepOver, stepOut, stepInto
+  map("n", "<leader>dj", "<Plug>VimspectorStepOver", opt)
+  map("n", "<leader>dk", "<Plug>VimspectorStepOut", opt)
+  map("n", "<leader>dl", "<Plug>VimspectorStepInto", opt)
 end
 
 return pluginKeys

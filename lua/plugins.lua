@@ -5,7 +5,6 @@ packer.startup({
     use("wbthomason/packer.nvim")
     use("arcticicestudio/nord-vim")
     use("folke/tokyonight.nvim")
-    use({ "projekt0n/github-nvim-theme" })
     use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
@@ -32,6 +31,8 @@ packer.startup({
       end,
       ft = { "markdown" },
     })
+    use("preservim/tagbar")
+    use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
   end,
   config = {
     display = {
