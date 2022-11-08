@@ -4,11 +4,13 @@ packer.startup({
 	function(use)
 		use("wbthomason/packer.nvim")
 		use("arcticicestudio/nord-vim")
-		use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+		use("folke/tokyonight.nvim")
+		use({ "projekt0n/github-nvim-theme" })
 		use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
 		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 		use("arkav/lualine-lsp-progress")
 		use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } })
+		use({ "nvim-tree/nvim-tree.lua", requires = { "nvim-tree/nvim-web-devicons" } })
 		use("glepnir/dashboard-nvim")
 		use("ahmedkhalf/project.nvim")
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -31,20 +33,18 @@ packer.startup({
 		use("lukas-reineke/indent-blankline.nvim")
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		use("puremourning/vimspector")
+		use("numToStr/Comment.nvim")
+		use({ "kylechui/nvim-surround", tag = "*" })
+		use({ "akinsho/toggleterm.nvim", tag = "*" })
+		use({ "neoclide/coc.nvim", branch = "release" })
+		use("preservim/vim-markdown")
 		use({
-			"numToStr/Comment.nvim",
-			config = function()
-				require("Comment").setup()
+			"iamcco/markdown-preview.nvim",
+			run = "cd app && npm install",
+			setup = function()
+				vim.g.mkdp_filetypes = { "markdown" }
 			end,
-		})
-		use({
-			"kylechui/nvim-surround",
-			tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-			config = function()
-				require("nvim-surround").setup({
-					-- Configuration here, or leave empty to use defaults
-				})
-			end,
+			ft = { "markdown" },
 		})
 	end,
 	config = {
