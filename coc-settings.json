@@ -14,5 +14,6 @@
     "python",
     "rust",
     "lua"
-  ]
+  ],
+  "snippets.ultisnips.pythonPrompt": false
 }
